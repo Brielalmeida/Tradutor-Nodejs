@@ -36,12 +36,15 @@ app.listen(8081, function(){
 
 app.get("/", function(req,res){
   res.render("pagina_principal")
+  localStorage.setItem("idioma", req.body.idioma);
 })
 
-app.post("/traduzir", function(req,res){
+app.post("/", function(req,res){
   translate(req.body.traduzir, req.body.idioma).then(result => 
     res.render("pagina_principal",{
-      traduzido: result
+      traduzido: result,
+      traduzir: req.body.traduzir
     })
     ).catch(err => console.log(err))
 })
+

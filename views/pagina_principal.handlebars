@@ -5,23 +5,23 @@
     </div>
     <h2>Tradutor de detecção automática</h2>
   </div>
-  <form action="/traduzir" method="POST">
+  <form action="/" method="POST">
     <div class="row justify-content-center">
       <div class="col-6  bg-white">    
         <div class="mb-3 text-start">
           <label class="form-label">Texto a ser traduzido:</label>
-          <textarea name="traduzir" class="form-control" placeholder="Insira aqui" id="traduzir" style="height: 200px; resize:none;"></textarea>
+          <textarea name="traduzir" class="form-control" placeholder="Insira aqui" id="traduzir" style="height: 200px; resize:none;">{{traduzir}}</textarea>
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-4 ">
-        <select name="idioma" id="idioma" class="form-select" aria-label="Default select example">
-          <option value="pt" selected>Português(Brasil)</option>
+        <select name="idioma" id="idioma" class="form-select">
+          <option value="pt">Português(Brasil)</option>
           <option value="en">Inglês</option>
           <option value="es">Espanhol</option>
           <option value="fr">Francês</option>
-          <option value="jp">Japonês</option>
+          <option value="ko">Koreano</option>
         </select>
       </div>
       <div class="col-2">
@@ -35,7 +35,7 @@
       <form>  
         <div class="mb-3 text-start">
           <label class="form-label">Tradução:</label>
-          <textarea name="traduzido" class="form-control" placeholder="" id="traduzido" style="height: 200px;resize:none;">{{traduzido}}</textarea>
+          <textarea name="traduzido" class="form-control" placeholder="" id="traduzido" style="height: 200px;resize:none;" readonly>{{traduzido}}</textarea>
         </div>
       </form>
     </div>
