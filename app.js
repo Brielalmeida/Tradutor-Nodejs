@@ -24,7 +24,6 @@ app.listen(8081, function(){
 
 app.get("/", function(req,res){
   res.render("pagina_principal")
-  localStorage.setItem("idioma", req.body.idioma);
 })
 
 app.post("/", function(req,res){
