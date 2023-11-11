@@ -1,6 +1,7 @@
 //express
 const express = require("express")
 const app = express()
+const PORT = process.env.PORT || 8081
 
 //handlebars
 const handlebars = require("express-handlebars").engine
@@ -18,9 +19,9 @@ translate('Hello, my name is mark, i am a 20 year old boy who needs therapy', 'p
 
 
 //rotas
-app.listen(8081, function(){
-  console.log("teste")
-})
+app.listen(PORT, () => {
+  console.log(`teste porta: ${PORT}`);
+});
 
 app.get("/", function(req,res){
   res.render("pagina_principal")
