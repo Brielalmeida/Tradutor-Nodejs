@@ -25,7 +25,6 @@ app.listen(PORT, () => {
 
 app.get("/", function(req,res){
   res.render("pagina_principal")
-  localStorage.setItem("idioma", req.body.idioma);
 })
 
 app.post("/", function(req,res){
